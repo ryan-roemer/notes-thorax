@@ -16,39 +16,10 @@
       },
       collection: {
         "reset":     function ()  { this.render(); },
-        "notes:add": function (m) { this.addNote(m); }
+        "notes:add": function (m) {
+          console.log(m);
+         }
       }
-    },
-
-    initialize: function () {
-      // Cache view and just show on re-render.
-      this.$input = this.$("#note-new-input");
-
-      // Bootstrap any existing notes.
-      this.addNotes();
-    },
-
-    // Add single child note view to front of notes list.
-    addNote: function (model) {
-      var view = new Application.Views["notes/item"]({ model: model });
-
-      // NOTE: Thorax's view.render() doesn't return `this`.
-      view.render();
-
-      this.$("#notes-list tr")
-        .filter(":last")
-        .after(view.el);
-    },
-
-    // Clear and add all notes to notes list.
-    addNotes: function () {
-      // Clear existing child note items.
-      this.$("#notes-list tr.notes-item").remove();
-
-      // Add all notes from collection, sorted old to new.
-      this.collection.chain()
-        .sortBy(function (m) { return m.get("createdAt"); })
-        .each(this.addNote, this);
     },
 
     // Create note on enter key.
@@ -60,8 +31,10 @@
 
     createNote: function () {
       // Get value, then reset note input.
-      var input = this.$input.val().trim();
-      this.$input.val("");
+      var $input = this.$("#note-new-input"),
+        input = $input.val().trim();
+
+      $input.val("");
 
       if (input) {
         this.create(input);

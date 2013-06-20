@@ -1,6 +1,12 @@
 Thorax Seed
 ===========
 
+Todo
+====
+
+* Styles are broken -- need to retag / identify with new DOM structure.
+
+
 Install
 =======
 
@@ -33,6 +39,11 @@ The `notes` module contains everything for a list of notes.
 
 
 
+
+Notes
+-----
+
+* Search: Use "item filter". Some extra features for single collection including
 
 
 
