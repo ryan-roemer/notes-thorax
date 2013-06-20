@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "thorax": "walmartlabs/thorax#~2.0.0rc7",
-    "lumbar-loader": "walmartlabs/lumbar-loader#~1.1.2"
+    "lumbar-loader": "walmartlabs/lumbar-loader#~1.1.2",
+    "backbone.localStorage": "1.1.5"
   }
 }

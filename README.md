@@ -13,6 +13,20 @@ Install dependencies:
 
 
 
+Development Notes
+=================
+
+Log
+---
+A rough log of generating and porting the project.
+
+The note model and collection are shared.
+
+    $ grunt generate:model:note
+    $ grunt generate:collection:notes
+
+
+
 
 
 

@@ -19,8 +19,12 @@
         "js/model.js",
         "js/collection.js",
         "js/view.js",
-        {"module-map": true},
-        "js/lib/bootstrap.js"
+        {
+          "module-map": true
+        },
+        "js/lib/bootstrap.js",
+        "js/models/note.js",
+        "js/collections/notes.js"
       ],
       "styles": [
         "stylesheets/base.css",
