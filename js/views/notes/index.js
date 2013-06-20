@@ -7,8 +7,6 @@
 
     name: "notes/index",
 
-    el: "#notes",
-
     events: {
       "click #note-create": function () {
         this.createNote();
@@ -28,16 +26,6 @@
 
       // Bootstrap any existing notes.
       this.addNotes();
-    },
-
-    render: function () {
-      // Show appropriate region.
-      $(".region").not(".region-notes").hide();
-      $(".region-notes").show();
-
-
-      console.log("TODO HERE RENDER");
-      return this;
     },
 
     // Add single child note view to front of notes list.
