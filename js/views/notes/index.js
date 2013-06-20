@@ -13,9 +13,6 @@
       },
       "keypress #note-new-input": function (ev) {
         this.enterNote(ev);
-      },
-      collection: {
-        "reset":     function ()  { this.render(); }
       }
     },
 
@@ -27,23 +24,20 @@
     },
 
     createNote: function () {
-      // Get value, then reset note input.
       var $input = this.$("#note-new-input"),
         input = $input.val().trim();
 
+      // Reset value.
       $input.val("");
 
+      // Create note if non-empty input.
       if (input) {
         this.create(input);
       }
     },
 
     create: function (title) {
-      var coll = this.collection;
-
-      // Add new model to collection, and corresponding note
-      // to DOM after model is saved.
-      coll.create({ title: title });
+      this.collection.create({ title: title });
     }
 
   });
