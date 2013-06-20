@@ -5,6 +5,9 @@ Todo
 ====
 
 * Styles are broken -- need to retag / identify with new DOM structure.
+* Single note view.
+* Navigate to single note view.
+* Add navigation filter.
 
 
 Install
