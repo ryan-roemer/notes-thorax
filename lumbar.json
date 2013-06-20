@@ -33,7 +33,9 @@
       ]
     },
     "notes": {
-      "routes": {},
+      "routes": {
+        "": "index"
+      },
       "scripts": [
         "js/routers/notes.js",
         "js/views/notes/index.js",

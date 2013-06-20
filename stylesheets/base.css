@@ -1,1 +1,15 @@
 /* This stylesheet will be available on all modules */
+/* Nav bar */
+#note-nav a i {
+  opacity: 0.65;
+}
+
+/* (Sort-of) iPhone Portrait (usually 320px). */
+@media (max-width: 390px) {
+  .navbar-search .search-query {
+    width: 120px;
+  }
+  .hidden-phone-portrait {
+    display: none !important;
+  }
+}

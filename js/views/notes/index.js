@@ -34,22 +34,22 @@
       // Show appropriate region.
       $(".region").not(".region-notes").hide();
       $(".region-notes").show();
+
+
+      console.log("TODO HERE RENDER");
       return this;
     },
 
     // Add single child note view to front of notes list.
     addNote: function (model) {
+      var view = new Application.Views["notes/item"]({ model: model });
 
-      console.log("TODO HERE IMPL addNote");
+      // NOTE: Thorax's view.render() doesn't return `this`.
+      view.render();
 
-      // var view = new Application.Views["notes/item"]({ model: model });
-
-      // // NOTE: Thorax's view.render() doesn't return `this`.
-      // view.render();
-
-      // this.$("#notes-list tr")
-      //   .filter(":last")
-      //   .after(view.el);
+      this.$("#notes-list tr")
+        .filter(":last")
+        .after(view.el);
     },
 
     // Clear and add all notes to notes list.

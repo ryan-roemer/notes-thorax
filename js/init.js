@@ -16,20 +16,32 @@ Application.Collections = Thorax.Collections;
 Thorax.setRootObject(Application);
 
 $(function() {
-  // Application and other templates included by the base
-  // Application may want to use the link and url helpers
-  // which use hasPushstate, etc. so setup history, then
-  // render, then dispatch
-  Backbone.history.start({
-    pushState: false,
-    root: '/',
-    silent: true
-  });
   // TODO: can remove after this is fixed:
   // https://github.com/walmartlabs/lumbar/issues/84
   Application.template = Thorax.templates.application;
-  Application.appendTo('body');
-  Backbone.history.loadUrl();
+  Application.appendTo("body");
+
+  // Post-ready initialization, etc.
+  Application.collection = new Application.Collections["notes"]();
+
+  // Wait until we have our initial collection from the backing
+  // store before firing up the router.
+  Application.collection.once("reset", function() {
+    // Application and other templates included by the base
+    // Application may want to use the link and url helpers
+    // which use hasPushstate, etc. so setup history, then
+    // render, then dispatch
+    Backbone.history.start({
+      pushState: false,
+      root: '/',
+      silent: true
+    });
+
+    Backbone.history.loadUrl();
+  });
+
+  // Now fetch collection data, kicking off everything.
+  Application.collection.fetch({ reset: true });
 });
 
 // This configures our Application object with values
