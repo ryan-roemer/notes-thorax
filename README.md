@@ -25,6 +25,12 @@ The note model and collection are shared.
     $ grunt generate:model:note
     $ grunt generate:collection:notes
 
+The `notes` module contains everything for a list of notes.
+
+    $ grunt generate:module:notes
+    $ grunt generate:view:notes/index
+    $ grunt generate:view:notes/item
+
 
 
 

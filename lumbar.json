@@ -15,6 +15,7 @@
       ],
       "scripts": [
         "components/lumbar-loader/lumbar-loader-backbone.js",
+        "js/lib/backbone.localStorage-1.1.4.js",
         "js/init.js",
         "js/model.js",
         "js/collection.js",
@@ -29,6 +30,17 @@
       "styles": [
         "stylesheets/base.css",
         "stylesheets/bootstrap.css"
+      ]
+    },
+    "notes": {
+      "routes": {},
+      "scripts": [
+        "js/routers/notes.js",
+        "js/views/notes/index.js",
+        "js/views/notes/item.js"
+      ],
+      "styles": [
+        "stylesheets/notes.css"
       ]
     }
   },
