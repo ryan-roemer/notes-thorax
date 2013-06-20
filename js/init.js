@@ -23,7 +23,7 @@ $(function() {
   Application.appendTo("body");
 
   // Post-ready initialization, etc.
-  Application.collection = new Application.Collections["notes"]();
+  Application.setCollection(new Application.Collections["notes"]());
 
   // Wait until we have our initial collection from the backing
   // store before firing up the router.

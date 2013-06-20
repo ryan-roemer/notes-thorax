@@ -1,19 +1,20 @@
 <!-- Content: Notes -->
 <div id="notes" class="region region-notes">
   <table id="notes-list" class="table table-bordered table-hover">
-    <tbody>
+    <thead>
       <tr class="notes-new">
-        <td class="note-name">
+        <th class="note-name">
           <input id="note-new-input"
                  placeholder="Write a new note." autofocus>
-        </td>
-        <td class="note-action">
+        </th>
+        <th class="note-action">
           <button id="note-create" class="btn pull-right">
             <i class="icon-plus"></i>
           </button>
-        </td>
+        </th>
       </tr>
-    </tbody>
+    </thead>
+    {{collection tag="tbody" item-view="notes/item"}}
   </table>
 </div>
 

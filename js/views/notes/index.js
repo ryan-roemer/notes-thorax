@@ -15,7 +15,7 @@
         this.enterNote(ev);
       },
       collection: {
-        "reset":     function ()  { this.addNotes(); },
+        "reset":     function ()  { this.render(); },
         "notes:add": function (m) { this.addNote(m); }
       }
     },
