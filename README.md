@@ -5,9 +5,20 @@ Todo
 ====
 
 * Styles are broken -- need to retag / identify with new DOM structure.
+* Module structure: notes
+  * index
+  * index-item
+  * note
+  * note-*
+* Leave collection / model in base...
 * Single note view.
 * Navigate to single note view.
 * Add navigation filter.
+
+
+{{#link "note/{{id}}" expand-tokens=true}}Link text{{/link}}
+{{#button "methodName"}}button{{/button}}
+
 
 
 Install

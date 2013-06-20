@@ -32,12 +32,8 @@
 
       // Create note if non-empty input.
       if (input) {
-        this.create(input);
+        this.collection.create({ title: input });
       }
-    },
-
-    create: function (title) {
-      this.collection.create({ title: title });
     }
 
   });
