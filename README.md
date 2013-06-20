@@ -45,6 +45,9 @@ Notes
 
 * Search: Use "item filter". Some extra features for single collection including
 
+<!-- Content: Single Note TODO INSERT IN NOTES/INDEX
+<div id="note" class="region region-note"></div>-->
+
 
 
 

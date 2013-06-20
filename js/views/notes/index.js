@@ -15,10 +15,7 @@
         this.enterNote(ev);
       },
       collection: {
-        "reset":     function ()  { this.render(); },
-        "notes:add": function (m) {
-          console.log(m);
-         }
+        "reset":     function ()  { this.render(); }
       }
     },
 
@@ -46,12 +43,7 @@
 
       // Add new model to collection, and corresponding note
       // to DOM after model is saved.
-      coll.create({ title: title }, {
-        success: function (colData, modelData) {
-          // Trigger event on model retrieved from collection.
-          coll.trigger("notes:add", coll.get(modelData.id));
-        }
-      });
+      coll.create({ title: title });
     }
 
   });
